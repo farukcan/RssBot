@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using RssBot.Models;
 using System.Net;
 using System.Xml.Linq;
+using System.Text.RegularExpressions;
 
 namespace RssBot.Services 
 {
@@ -77,10 +78,10 @@ namespace RssBot.Services
                                     await client.SendTextMessageAsync(
                                         chatId: ChatId,
                                         text: 
-                                            "**" + item.Element("title").Value + "**"
-                                            + "\n" + item.Element("description").Value
-                                            + "\n" + item.Element("link").Value,
-                                        parseMode: ParseMode.MarkdownV2
+                                            "<b>" + StripHTML(item.Element("title").Value)+ "</b>"
+                                            + "\n" + StripHTML(item.Element("description").Value)
+                                            + "\n" + StripHTML(item.Element("link").Value),
+                                        parseMode: ParseMode.Html
                                     );
                                     // update lastupdated
                                     if(pubDate > feed.LastUpdated){
@@ -98,6 +99,16 @@ namespace RssBot.Services
                 }
                 await Task.Delay(delayInSeconds*1000);
             }
+        }
+
+        public static string StripHTML(string? input)
+        {
+            if (input==null)
+            {
+                return string.Empty;
+            }
+            return Regex.Replace(input, "<.*?>", String.Empty);
+
         }
 
         private async Task LoadDatabase()
