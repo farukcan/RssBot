@@ -17,7 +17,6 @@ namespace RssBot.Services
         public static Bot? Instance;
         string? BotToken => Environment.GetEnvironmentVariable("BOT_TOKEN");
         string? ChatId => Environment.GetEnvironmentVariable("CHAT_ID");
-        string? detectedChatId = null;
         int delayInSeconds => int.Parse(Environment.GetEnvironmentVariable("DELAY") ?? "60");
         private TelegramBotClient client;
         public Bot(){
