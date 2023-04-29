@@ -77,7 +77,7 @@ namespace RssBot.Services
                                     await client.SendTextMessageAsync(
                                         chatId: ChatId,
                                         text: 
-                                            item.Element("title").Value 
+                                            "**" + item.Element("title").Value + "**"
                                             + "\n" + item.Element("description").Value
                                             + "\n" + item.Element("link").Value
                                     );
