@@ -4,13 +4,13 @@ Open source Telegram RSS bot.
 
 ## Features
 
-```/add <name> <url> : add a RSS feed ```
+```/add <name> <url>``` : add a RSS feed 
 
-```/remove <name> : remove a RSS feed ```
+```/remove <name>``` : remove a RSS feed 
 
-```/list : list all feeds ```
+```/list ``` : list all feeds
 
-```/help : show this message ```
+```/help``` : show this message 
 
 Chat Id : To post feeds to the group or channel. (Example: -98453564)
 
