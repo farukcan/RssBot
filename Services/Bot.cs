@@ -92,7 +92,6 @@ namespace RssBot.Services
                         Log.Error(exception.ToString());
                     }
                 }
-                Log.Information("LOOP"+delayInSeconds);
                 if(anyChange){
                     await WriteDatabase();
                 }
@@ -204,7 +203,7 @@ namespace RssBot.Services
                     if(Database is null) return;
                     var text = "Feeds : \n\r";
                     foreach(var feed in Database.Feeds){
-                        text += feed.Name + "\n\r";
+                        text += $"{feed.Name} : {feed.Url} \n\r";
                     }
                     await client.SendTextMessageAsync(
                         chatId: update.Message.Chat.Id,
