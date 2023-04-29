@@ -20,7 +20,7 @@ Delay : New feed checking interval in second. (Example: 30)
 
 ## Usage
 
-### Docket without persistent storage:
+### Docker without persistent storage:
 
 ```bash
 docker run -e "BOT_TOKEN=sometoken" \
@@ -44,7 +44,7 @@ docker create \
 
 ### Local
 
-* Create .env file that contains environment values (BOT_TOKEN,DELAY,CHAT,ID)
+* Create .env file that contains environment values (BOT_TOKEN,DELAY,CHAT_ID)
 * Run command : ```npm run dev``` or ```dotnet watch run``` (dotnet installation required)
 
 ## Environment Variables
