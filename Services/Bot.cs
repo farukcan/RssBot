@@ -80,7 +80,7 @@ namespace RssBot.Services
                                             "**" + item.Element("title").Value + "**"
                                             + "\n" + item.Element("description").Value
                                             + "\n" + item.Element("link").Value,
-                                        parseMode: ParseMode.Markdown
+                                        parseMode: ParseMode.MarkdownV2
                                     );
                                     // update lastupdated
                                     if(pubDate > feed.LastUpdated){
