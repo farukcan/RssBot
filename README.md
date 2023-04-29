@@ -1,6 +1,10 @@
 # RssBot
 
-Open source Telegram RSS bot.
+Open source Telegram RSS bot. 
+
+Techs: C#, .NET Core, Docker (Alpine image), Telegram Bot. 
+
+Highly portable and crossplatform (linux to windows)
 
 ## Features
 
