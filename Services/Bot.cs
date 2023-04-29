@@ -79,7 +79,8 @@ namespace RssBot.Services
                                         text: 
                                             "**" + item.Element("title").Value + "**"
                                             + "\n" + item.Element("description").Value
-                                            + "\n" + item.Element("link").Value
+                                            + "\n" + item.Element("link").Value,
+                                        parseMode: ParseMode.Markdown
                                     );
                                     // update lastupdated
                                     if(pubDate > feed.LastUpdated){
