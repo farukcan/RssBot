@@ -2,6 +2,7 @@ using RssBot.Services;
 using dotenv.net;
 using Serilog.Sinks.SystemConsole.Themes;
 using Serilog;
+using Microsoft.Extensions.FileProviders;
 
 DotEnv.Load();
 
@@ -32,6 +33,18 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+            Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
+    RequestPath = "/lib",
+
+    OnPrepareResponse = ctx =>
+    {
+        ctx.Context.Response.Headers.Append("Cache-Control", "public,max-age=600");
+    }
+});
 
 app.UseRouting();
 

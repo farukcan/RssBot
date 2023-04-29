@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/farukcan/RssBot#readme",
   "dependencies": {
-    "jquery": "^3.6.4"
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4",
+    "jquery-ajax-unobtrusive": "^3.2.6",
+    "jquery-validation": "^1.19.5",
+    "jquery-validation-unobtrusive": "^4.0.0"
   }
 }
