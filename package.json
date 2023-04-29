@@ -1,0 +1,22 @@
+{
+  "name": "RssBot",
+  "version": "1.0.0",
+  "description": "mir ai",
+  "main": "index.js",
+  "scripts": {
+    "dev": "dotnet watch run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farukcan/RssBot.git"
+  },
+  "keywords": [
+    "ai"
+  ],
+  "author": "farukcan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farukcan/RssBot/issues"
+  },
+  "homepage": "https://github.com/farukcan/RssBot#readme"
+}
