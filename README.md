@@ -16,7 +16,7 @@ Chat Id : To post feeds to the group or channel. (Example: -98453564)
 
 Delay : New feed checking interval in second. (Example: 30)
 
-/database.json : Your feeds will be saved in this file. You can use this file to backup your feeds.
+/Data/database.json : Your feeds will be saved in this file. You can use this file to backup your feeds.
 
 ## Usage
 
@@ -37,7 +37,7 @@ docker create \
   -e DELAY=60 \
   -e BOT_TOKEN=InsertToken \
   -e CHAT_ID=InsertChatID \
-  -v /path/to/host/database.json:/database.json \
+  -v /path/to/host/data:/Data \
   --restart unless-stopped \
   farukcan/rss-bot
 ```

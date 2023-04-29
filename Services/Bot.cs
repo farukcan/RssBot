@@ -104,9 +104,9 @@ namespace RssBot.Services
             // read database.json file
             string? data = null;
             try{
-                data = await System.IO.File.ReadAllTextAsync("database.json");
+                data = await System.IO.File.ReadAllTextAsync("Data/database.json");
             }catch(Exception e){
-                Log.Error(e, "Error reading database.json");
+                Log.Error(e, "Error reading Data/database.json");
             }
             if(string.IsNullOrEmpty(data)){
                 // create new Database object
@@ -122,8 +122,8 @@ namespace RssBot.Services
         {
             // convert Database object to json
             var data = JsonConvert.SerializeObject(Database);
-            // write it to database.json file
-            await System.IO.File.WriteAllTextAsync("database.json", data);
+            // write it to Data/database.json file
+            await System.IO.File.WriteAllTextAsync("Data/database.json", data);
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)

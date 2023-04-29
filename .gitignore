@@ -6,8 +6,7 @@
 # Envorinment
 .env
 
-# Database
-database.json
+
 
 # User-specific files
 *.rsuser
