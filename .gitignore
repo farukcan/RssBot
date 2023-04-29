@@ -6,7 +6,8 @@
 # Envorinment
 .env
 
-
+# Database
+[Dd]ata/database.json
 
 # User-specific files
 *.rsuser
