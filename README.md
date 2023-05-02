@@ -52,7 +52,13 @@ docker create \
 * Run command : ```npm run dev``` or ```dotnet watch run``` (dotnet installation required)
 
 ### Captain Definition
-You can also use caprover to deploy it. Just do not forget environment variables.
+You can also use caprover to deploy it.
+* Create caprover app
+* Enter environment variable
+* Use deployment methods : https://caprover.com/docs/deployment-methods.html
+* * Method 2: Tarball => Download this repo, convert zip to tar. And upload it.
+* * Method 3: Deploy from Github/Bitbucket/Gitlab => Fork repository. Enter git crediantials, and repo address. 
+* * Method 6: Deploy via ImageName => type ```farukcan/rss-bot:latest``` to the area and deploy. (recommended)
 
 ## Environment Variables
 
