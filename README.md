@@ -51,6 +51,9 @@ docker create \
 * Create .env file that contains environment values (BOT_TOKEN,DELAY,CHAT_ID)
 * Run command : ```npm run dev``` or ```dotnet watch run``` (dotnet installation required)
 
+### Captain Definition
+You can also use caprover to deploy it. Just do not forget environment variables.
+
 ## Environment Variables
 
 BOT_TOKEN= ...from @botfather...
